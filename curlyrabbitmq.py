@@ -21,7 +21,7 @@ json_data = {
         'src-uri': 'amqp:///'+VHOST,
         'src-queue': SRC_QUEUE,
         'src-protocol': 'amqp091',
-        'src-prefetch-count': 1000,
+        'src-prefetch-count': 1,
         'src-delete-after': 'queue-length',
         'dest-protocol': 'amqp091',
         'dest-uri': 'amqp:///'+VHOST,
