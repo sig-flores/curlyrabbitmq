@@ -35,7 +35,7 @@ json_data = {
 try:
     ## Token-based auth for this MOVE action doensn't appear to function at this time. 
     ## U:P can be used in the place of the API token for the time being. 
-    response = requests.put('https://'+INSTANCE_NAME+'.rmq.cloudamqp.com/api/parameters/shovel/'+VHOST+'/Move%20from%20'+SRC_QUEUE, headers=headers, json=json_data, auth=(uName, pWord), timeout=30)
+    response = requests.put('https://'+INSTANCE_NAME+'/api/parameters/shovel/'+VHOST+'/Move%20from%20'+SRC_QUEUE, headers=headers, json=json_data, auth=(uName, pWord), timeout=30)
 except requests.exceptions.Timeout:
     ## A loop could be configured here to retry if the initial move fails. Future improvement. 
     print("Request Timeout. Please try again...")
